@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Question</label>
+        <input type="text" name="" id="Q">
+    </div>
+    <div>
+        <label for="">ANSWER</label>
+        <input type="text" name="" id="R">
+    </div>
+    <button id="enregtrer" type="submit">Submit</button>
+
+    <div id="list"></div>
+</body>
+
+    <script>
+        const subbtn=document.getElementById("enregtrer")
+        const list=document.getElementById("list");
+        flashcard_test=[];
+
+
+
+
+
+        subbtn.addEventListener("click", (e)=>{
+            e.preventDefault;
+
+                const question=document.getElementById("Q").value;
+        const result=document.getElementById("R").value;
+            flashcard_test.push(quiz=>{
+                Question= question;
+                Answer=result;
+            })
+
+
+
+          flashcard_test.forEach(el => {
+          const questionout= document.createElement("p");
+          const answernout= document.createElement("p");
+
+          questionout.innerHTML=question;
+          answernout.innerHTML=result;
+
+        
+          list.appendChild(questionout);
+          list.appendChild(answernout);
+
+        });
+        
+        localStorage.setItem.flashcard_test
+        })
+       
+    </script>
+
+</html>
